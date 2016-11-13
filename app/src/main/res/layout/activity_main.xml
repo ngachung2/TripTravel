@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity"
+    android:padding="10pt">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Location:"
+        android:id="@+id/tv_location"
+        android:layout_below="@+id/tv_title"
+        android:height="43dp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Activity Type:"
+        android:id="@+id/tv_type"
+        android:layout_below="@+id/tv_location"
+        android:gravity="center_vertical"
+        android:height="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Start Time: "
+        android:id="@+id/tv_start"
+        android:layout_below="@+id/tv_type"
+        android:height="43dp"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="End Time:"
+        android:id="@+id/tv_end"
+        android:layout_below="@+id/tv_start"
+        android:gravity="center_vertical"
+        android:height="43dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Address:"
+        android:id="@+id/tv_address"
+        android:layout_below="@+id/tv_end"
+        android:gravity="center_vertical"
+        android:height="43dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_location"
+        android:layout_below="@+id/tv_title"
+        android:layout_toRightOf="@+id/tv_location"
+        android:hint="location name"
+        android:height="43dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_type"
+        android:layout_below="@+id/et_location"
+        android:layout_toRightOf="@+id/tv_type"
+        android:height="43dp"
+        android:hint="type" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/et_start"
+        android:layout_below="@+id/et_type"
+        android:layout_toRightOf="@+id/tv_start"
+        android:hint="time" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/et_end"
+        android:layout_below="@+id/et_start"
+        android:layout_toRightOf="@+id/tv_end"
+        android:layout_gravity="center_horizontal"
+        android:hint="time" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_address"
+        android:layout_below="@+id/et_end"
+        android:layout_toRightOf="@+id/tv_address"
+        android:layout_gravity="center_horizontal"
+        android:height="43dp"
+        android:hint="address" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Activity"
+        android:id="@+id/tv_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#053bff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Expense"
+        android:id="@+id/tv_expense"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_address"
+        android:layout_alignRight="@+id/tv_address"
+        android:layout_alignEnd="@+id/tv_address"
+        android:layout_marginTop="24dp"
+        android:height="43dp"
+        android:gravity="center_vertical" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:text="Add"
+        android:id="@+id/bt_add_expense"
+        android:layout_above="@+id/lv_expense"
+        android:layout_toRightOf="@+id/tv_expense"
+        android:layout_alignEnd="@+id/bt_confirm"
+        android:layout_alignStart="@+id/bt_confirm" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_expense"
+        android:layout_below="@+id/tv_expense"
+        android:layout_alignStart="@+id/bt_cancel" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/bt_cancel"
+        android:layout_alignLeft="@+id/tv_expense"
+        android:layout_alignStart="@+id/tv_expense"
+        android:layout_marginTop="35dp"
+        android:background="#7595ff"
+        android:layout_below="@+id/lv_expense" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:id="@+id/bt_confirm"
+        android:layout_alignTop="@+id/bt_cancel"
+        android:layout_alignRight="@+id/et_address"
+        android:layout_alignEnd="@+id/et_address"
+        android:background="#FF7595FF"
+        android:layout_below="@+id/lv_expense" />
+
+</RelativeLayout>
